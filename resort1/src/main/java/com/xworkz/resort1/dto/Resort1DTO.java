@@ -4,11 +4,11 @@ import lombok.Data;
 
 @Data
 public class Resort1DTO {
-
 	private String name;
+	private String emailId;
 	private String address;
+	private long phoneNumber;
+	private int rooms;
 	private String roomType;
-	private String activity;
-	private int price;
-	
+	private int noOfNights;
 }

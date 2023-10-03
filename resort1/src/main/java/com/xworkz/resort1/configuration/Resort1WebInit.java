@@ -4,9 +4,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class Resort1WebInit extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer{
-
-
-
 @Override
 protected Class<?>[] getRootConfigClasses() {
 	// TODO Auto-generated method stub
