@@ -99,4 +99,13 @@ public class RTOUserRepoImpl implements RTOUserRepository {
 			return false;
 		}
 	}
+
+	@Override
+	public RTOUserEntity findApplication(String applicationNumber) {
+		EntityManager manager = factory.createEntityManager();
+		Query query = manager.createNamedQuery("findApplication");
+		query.setParameter("aplNo", applicationNumber);
+		RTOUserEntity entities = (RTOUserEntity) query.getSingleResult();
+		return entities;
+	}
 }

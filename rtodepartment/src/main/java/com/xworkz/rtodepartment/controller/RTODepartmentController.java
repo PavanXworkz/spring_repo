@@ -54,7 +54,7 @@ public class RTODepartmentController {
 		List<RTODepartmentDTO> dto = service.findByState(state);
 		System.out.println("state rtos" + state);
 		model.addAttribute("state", dto);
-		return "adminProfile";
+		return "officerProfile";
 
 	}
 

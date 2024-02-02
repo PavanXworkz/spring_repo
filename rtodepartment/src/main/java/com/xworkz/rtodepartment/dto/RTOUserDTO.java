@@ -25,7 +25,7 @@ public class RTOUserDTO {
 	private String dob;
 	private int age;
 	private String bloodGroup;
-	private String Qualification;
+	private String qualification;
 	private String placeOfBirth;
 	private String rtoOffice;
 	private int permanentPinCode;

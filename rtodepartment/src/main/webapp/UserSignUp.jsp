@@ -143,7 +143,6 @@
 					</label>
 					<div class="col-md-6 mb-2">
 						<select name="state" onchange="makeSubmenu(this.value)" required>
-							<option value="" disabled selected>Choose State</option>
 							<option value="Andhra Pradesh">Andhra Pradesh</option>
 							<option value="Arunachal Pradesh">Arunachal Pradesh</option>
 							<option value="Assam">Assam</option>

@@ -98,4 +98,12 @@ public class RTOUserServiceImpl implements RTOUserService {
 		return update;
 	}
 
+	@Override
+	public RTOUserDTO getApplicationNo(String applicationNumber) {
+		RTOUserEntity entity = repository.findApplication(applicationNumber);
+		RTOUserDTO dto = new RTOUserDTO();
+		BeanUtils.copyProperties(entity, dto);
+		return dto;
+	}
+
 }

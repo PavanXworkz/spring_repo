@@ -15,4 +15,6 @@ public interface RTOUserService {
 	public List<RTOUserDTO> findState(String state);
 
 	public boolean updateById(int id);
+
+	public RTOUserDTO getApplicationNo(String applicationNumber);
 }

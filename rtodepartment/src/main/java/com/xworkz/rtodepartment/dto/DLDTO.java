@@ -29,7 +29,11 @@ public class DLDTO {
 	private String witnessMiddleName;
 	private String witnessLastName;
 	private String witnessRelation;
-	private String witnessName;
+	private String trainerName;
 	private String licenceNumber;
 	private LocalDateTime registerDateTime;
+	private String applicationNumber;
+	private String state;
+	private String status;
+	private String file;
 }

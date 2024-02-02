@@ -19,9 +19,9 @@
 
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="userLogin.jsp">LogIn</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="officerSignIn.jsp">Officer</a></li>
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="DLapplication.jsp">DL Application</a></li>
-						<!-- 					<li class="nav-item"><a class="nav-link" href="SignIn.jsp">Sign in</a></li>
- -->
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="dlLogin.jsp">DL Application</a></li>
+						<li class="nav-item"><a class="nav-link" href="fileDownload.jsp">Download</a></li>
+
 					</ul>
 				</div>
 			</div>

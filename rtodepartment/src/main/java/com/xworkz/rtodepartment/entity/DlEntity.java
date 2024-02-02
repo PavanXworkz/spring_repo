@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -15,6 +17,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "dlapplication")
+@NamedQueries({ @NamedQuery(name = "dlByState", query = "select e from DlEntity e where e.state=:dlstate"),
+		@NamedQuery(name = "updatepending", query = "update DlEntity e set e.status='Approved' where e.applicationNumber=:app"),
+		@NamedQuery(name = "uplode", query = "SELECT e FROM DlEntity e WHERE e.applicationNumber=:dlnumber") })
 public class DlEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +33,7 @@ public class DlEntity {
 	private String education;
 	private String bloodGroup;
 	private String citizenship;
-	private long CitizenshipNumber;
+	private long citizenshipNumber;
 	private String citizenshipIssuedDistict;
 	private String passportNumber;
 	private String countryPassport;
@@ -37,8 +42,11 @@ public class DlEntity {
 	private String witnessMiddleName;
 	private String witnessLastName;
 	private String witnessRelation;
-	private String witnessName;
+	private String trainerName;
 	private String licenceNumber;
 	private LocalDateTime registerDateTime;
-
+	private String applicationNumber;
+	private String state;
+	private String status;
+	private String file;
 }

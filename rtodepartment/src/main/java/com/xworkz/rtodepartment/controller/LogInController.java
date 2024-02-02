@@ -61,11 +61,20 @@ public class LogInController {
 			} else {
 				model.addAttribute("errr", "No users found for the admin's state.");
 			}
-			return "adminProfile";
+			return "officerProfile";
 		} else {
 			model.addAttribute("err", "Invalid Credentials");
 			return "officerSignIn";
 		}
+	}
+
+	@GetMapping("findAll")
+	public String findAll(Model model) {
+		System.out.println("admin find all controller");
+		List<RTODepartmentDTO> dtos = service.findAll();
+		model.addAttribute("list", dtos);
+		return "adminProfile";
+
 	}
 
 	/*

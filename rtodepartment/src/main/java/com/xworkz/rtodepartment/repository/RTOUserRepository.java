@@ -16,4 +16,6 @@ public interface RTOUserRepository {
 	public List<RTOUserEntity> findByState(String state);
 
 	public boolean updateById(int id);
+
+	public RTOUserEntity findApplication(String applicationNumber);
 }

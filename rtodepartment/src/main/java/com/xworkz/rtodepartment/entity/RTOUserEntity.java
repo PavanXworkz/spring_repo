@@ -22,7 +22,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "user_rto")
 @NamedQueries({ @NamedQuery(name = "findAllUser", query = "select e from RTOUserEntity e"),
 		@NamedQuery(name = "findByState", query = "SELECT e from RTOUserEntity e WHERE e.state=:st"),
-		@NamedQuery(name = "userLogin", query = "SELECT e FROM RTOUserEntity e WHERE(e.applicationNumber=:apporcontno OR e.contactNo=:apporcontno) AND e.dob=:dob") })
+		@NamedQuery(name = "userLogin", query = "SELECT e FROM RTOUserEntity e WHERE(e.applicationNumber=:apporcontno OR e.contactNo=:apporcontno) AND e.dob=:dob"),
+		@NamedQuery(name = "findApplication", query = "SELECT e from RTOUserEntity e where e.applicationNumber=:aplNo") })
 public class RTOUserEntity {
 
 	@Id
@@ -38,7 +39,7 @@ public class RTOUserEntity {
 	private String dob;
 	private int age;
 	private String bloodGroup;
-	private String Qualification;
+	private String qualification;
 	private String placeOfBirth;
 	private String rtoOffice;
 	private int permanentPinCode;

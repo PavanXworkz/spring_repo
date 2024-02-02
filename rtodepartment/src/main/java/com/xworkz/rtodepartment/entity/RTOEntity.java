@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "rto_info")
 @NamedQueries({ @NamedQuery(name = "findEmail", query = "select e from RTOEntity e where e.emailId=:email"),
-		@NamedQuery(name = "officer", query = "SELECT e FROM RTOEntity e WHERE e.emailId=:eid AND e.password=:pws"),
+		@NamedQuery(name = "officer", query = "SELECT e FROM RTOEntity e WHERE e.emailId=:eid or e.password=:pws"),
 		@NamedQuery(name = "login", query = "select e from RTOEntity e where e.emailId=:eid or e.otp=:otp"),
 		@NamedQuery(name = "findbystate", query = "select e from RTOEntity e where e.state=:st"),
 		@NamedQuery(name = "findAll", query = "select e from RTOEntity e")

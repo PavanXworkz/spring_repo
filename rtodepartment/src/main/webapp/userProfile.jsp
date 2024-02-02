@@ -70,7 +70,7 @@ body {
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><a class="nav-link bi bi-person text-capitalize" href="#"> Hi,${em.firstName}</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="SignUp.jsp">SignUp</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="SignUp.jsp">SignUp</a></li> -->
 
 						<li class="nav-item"><a class="nav-link" href="userLogin.jsp">LogOut</a></li>
 					</ul>

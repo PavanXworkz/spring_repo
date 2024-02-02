@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xworkz.rtodepartment.dto.RTOUserDTO;
+import com.xworkz.rtodepartment.service.DlService;
 import com.xworkz.rtodepartment.service.RTOUserService;
 
 @Controller
@@ -24,6 +25,9 @@ public class UserController {
 
 	@Autowired
 	RTOUserService userService;
+
+	@Autowired
+	DlService service;
 
 	@PostMapping("saveuser")
 	public String save(@ModelAttribute RTOUserDTO userDTO, Model model) {
@@ -67,17 +71,25 @@ public class UserController {
 	}
 
 	@GetMapping("approveUser")
-
 	public String update(@RequestParam int id, Model model) {
 		boolean update = userService.updateById(id);
 		if (update == true) {
 			model.addAttribute("d", id);
 			model.addAttribute("up", "updated sucessfully");
-			return "adminProfile";
+			return "officerProfile";
 		} else {
 			model.addAttribute("nd", "update un sucessful");
 		}
-		return "adminProfile";
+		return "officerProfile";
+
+	}
+
+	@GetMapping("application")
+	public String getApplication(@RequestParam String applicationNumber, Model model) {
+		RTOUserDTO dto = userService.getApplicationNo(applicationNumber);
+		model.addAttribute("appNo", dto.getApplicationNumber());
+		model.addAttribute("dto", dto);
+		return "DLapplication";
 
 	}
 
